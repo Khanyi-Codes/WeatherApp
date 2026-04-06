@@ -1,0 +1,12 @@
+body{
+    background-color: blueviolet;
+}
+.weather-app{
+    background-color: white;
+    width: 400px;
+    height: 200px;
+    margin: 30px auto;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 30px 50px rgba(0,0,0,0.1);
+}
