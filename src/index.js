@@ -23,10 +23,11 @@ function refreshWeather(response){
         date.setMinutes(`0${date.getMinutes()}`);
     }
     timeElement.innerHTML = `${day} ${date.getHours()}:${date.getMinutes()}`;
-
     
-    
+    let iconElement = document.querySelector("#icon");
 
+    iconElement.innerHTML = `<img src = "${response.data.condition.icon_url}" class = "weather-app-icon">`;
+    
   
 }
 function searchCity(city){

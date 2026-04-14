@@ -38,19 +38,22 @@ main{
     /* align-items: center; */
 }
 .weather-app-temperature{
-    font-size: 60px;
+    font-size: 70px;
     font-weight: Bold;
     line-height: 60px;
     margin-left:10px;
 }
 .weather-app-icon{
-    font-size: 44px;
-    margin-top: 6px;
+    width: 88px;
+    height: 88px;
+    /* margin-top: 6px; */
+
 
 }
 .weather-app-unit{
-    margin-top: 5px;
-    font-size: 20px;
+    margin-top: 3px;
+    font-size: 28px;
+    font-weight: bold;
 }
 .weather-app{
     background-color: white;
