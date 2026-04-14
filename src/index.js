@@ -19,6 +19,9 @@ function refreshWeather(response){
     let date = new Date(response.data.time * 1000);
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     let day = days[date.getDay()];
+    if( date.getMinutes() < 10){
+        date.setMinutes(`0${date.getMinutes()}`);
+    }
     timeElement.innerHTML = `${day} ${date.getHours()}:${date.getMinutes()}`;
 
     
