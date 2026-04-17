@@ -48,3 +48,15 @@ function handleSearchSubmit(event){
 let searchformElement = document.querySelector(".search-form");
 searchformElement.addEventListener("submit", handleSearchSubmit);
 searchCity("Johannesburg");
+
+// Forcast template
+
+let forcast = document.querySelector("#forecast");
+
+forcast.innerHTML = `<div class = "weather-forecast-day">
+                <div class = "weather-forecast-date">Tue</div>
+                <div class = "weather-forecast-icon">🌧️</div>  
+                <div class = "weather-forecast-temperatures">
+                    <div class = "weather-forecast-temperature"><strong>15°</strong></div> 
+                    <div class= "weather-forecast-temperature">9° </div></div>
+            </div>`;
