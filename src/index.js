@@ -45,18 +45,33 @@ function handleSearchSubmit(event){
     searchCity(searchInput.value);
 
 }
+// Forcast template
+function displayForecast(){
+    let forecastElement = document.querySelector("#forecast");
+    let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+    let forecastHtml = ``;
+    days.forEach(function(day){
+
+    forecastHtml = forecastHtml + `<div class = "weather-forecast-day">
+                <div class = "weather-forecast-date">${day}</div>
+                <div class = "weather-forecast-icon">🌧️</div>  
+                <div class = "weather-forecast-temperatures">
+                    <div class = "weather-forecast-temperature">
+                    <strong>15°</strong></div> 
+                    <div class= "weather-forecast-temperature">9° </div>
+                    </div>
+            </div>`;});
+            forecastElement.innerHTML = forecastHtml;
+            
+}
+
+
+
 let searchformElement = document.querySelector(".search-form");
 searchformElement.addEventListener("submit", handleSearchSubmit);
 searchCity("Johannesburg");
 
-// Forcast template
+displayForecast();
 
-let forcast = document.querySelector("#forecast");
 
-forcast.innerHTML = `<div class = "weather-forecast-day">
-                <div class = "weather-forecast-date">Tue</div>
-                <div class = "weather-forecast-icon">🌧️</div>  
-                <div class = "weather-forecast-temperatures">
-                    <div class = "weather-forecast-temperature"><strong>15°</strong></div> 
-                    <div class= "weather-forecast-temperature">9° </div></div>
-            </div>`;
+
