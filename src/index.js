@@ -30,6 +30,7 @@ function refreshWeather(response){
 
     iconElement.innerHTML = `<img src = "${response.data.condition.icon_url}" class = "weather-app-icon">`;
     
+    getForecast(response.data.city);
   
 }
 function searchCity(city){
@@ -42,17 +43,25 @@ function handleSearchSubmit(event){
     event.preventDefault();
     let searchInput = document.querySelector(".search-form-input");
     
-    searchCity(searchInput.value);
+    searchCity(searchInput.value);}
+
+function getForecast(city){
+    let apiKey = "c64t23cdba0aa619b751fda43e0ao4bf";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayForecast);
 
 }
+
+
 // Forcast template
 function displayForecast(){
+
     let forecastElement = document.querySelector("#forecast");
     let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
     let forecastHtml = ``;
     days.forEach(function(day){
 
-    forecastHtml = forecastHtml + `<div class = "weather-forecast-day">
+    forecastHtml += `<div class = "weather-forecast-day">
                 <div class = "weather-forecast-date">${day}</div>
                 <div class = "weather-forecast-icon">🌧️</div>  
                 <div class = "weather-forecast-temperatures">
@@ -61,6 +70,7 @@ function displayForecast(){
                     <div class= "weather-forecast-temperature">9° </div>
                     </div>
             </div>`;});
+
             forecastElement.innerHTML = forecastHtml;
             
 }
@@ -71,7 +81,7 @@ let searchformElement = document.querySelector(".search-form");
 searchformElement.addEventListener("submit", handleSearchSubmit);
 searchCity("Johannesburg");
 
-displayForecast();
+
 
 
 
