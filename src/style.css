@@ -56,7 +56,7 @@ main{
     font-weight: bold;
 }
 .weather-app{
-    background-color: white;
+    background-color: rgb(252, 246, 252);
     max-width:fit-content;
     height: fit-content;
     margin: 45px auto;
