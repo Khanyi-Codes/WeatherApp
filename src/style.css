@@ -35,7 +35,7 @@ main{
 }
 .weather-app-temperature-container{
     display: flex;
-    /* align-items: center; */
+
 }
 .weather-app-temperature{
     font-size: 70px;
@@ -46,7 +46,7 @@ main{
 .weather-app-icon{
     width: 88px;
     height: 88px;
-    /* margin-top: 6px; */
+
 
 
 }
